@@ -1,0 +1,93 @@
+/* Main App Styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* View Switcher */
+.view-switcher {
+  display: flex;
+  gap: 0;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+}
+
+.switcher-btn {
+  flex: 1;
+  padding: 14px 16px;
+  border: none;
+  background: white;
+  color: #999;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.switcher-btn:hover {
+  color: #667eea;
+  background: #f9f9f9;
+}
+
+.switcher-btn.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+  background: white;
+}
+
+.app-content {
+  display: flex;
+  flex: 1;
+  gap: 0;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 350px;
+  background: white;
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  flex: 1;
+  background: white;
+  overflow-y: auto;
+}
+
+.crud-container {
+  flex: 1;
+  background: white;
+  overflow-y: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-height: 40%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .main-content {
+    flex: 1;
+  }
+
+  .switcher-btn {
+    font-size: 12px;
+    padding: 10px 8px;
+  }
+}
