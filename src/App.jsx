@@ -47,8 +47,9 @@ function App() {
             <button
               className="switcher-btn"
               onClick={() => switchView('crud')}
+              
             >
-              🔄 CRUD Demo
+              🔄 CRUD Demo -1 
             </button>
           </div>
 
